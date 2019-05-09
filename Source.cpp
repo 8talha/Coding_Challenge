@@ -163,9 +163,10 @@ struct First {
 	};
 void admin() {
 	
-	string opr="admin";
+	string opr;
 	int no;
-	
+	cout << "Enter name of admin" << endl;
+	cin >> opr;
 	if (opr=="admin")
 	{
 		
