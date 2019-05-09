@@ -114,7 +114,7 @@ struct First {
 	
 		
 	
-	void add_park()
+	void add_park() //This adds parking for Admin
 	{
 		int lot;
 		float hr_rate;
@@ -127,7 +127,7 @@ struct First {
 		cout << "For Slot" << total_no_slots - 1 << "Fare is" << hr_rate << endl;
 		add_parking++;
 	};
-	void del_park()
+	void del_park()//This delete parking for Admin
 	{
 		int no;
 		cout << "Enter PArking lot which you want to delete";
@@ -142,7 +142,7 @@ struct First {
 			cout << "Error Doesn't exist";
 		}
 	};
-	void del_opt()
+	void del_opt() //This delete operators' details for Admin
 	{
 		char n;
 		system("CLS");
@@ -161,7 +161,7 @@ struct First {
 		remove("parking3.dat");
 		rename("temp.dat", "registration_opt.txt");
 	};
-void admin() {
+void admin() { //Admin module
 	
 	string opr;
 	int no;
@@ -201,17 +201,17 @@ void admin() {
 		cout << "You have enterend invlid name of admin";
 	}
 };
-void revenue()
+void revenue() //Revenue module
 {
 	cout << "Total fare is " << total_fare << endl;
 };
-char location_of_car(int plate) {
+char location_of_car(int plate) { //Car location for customer
 	const char* location;
-	location = "Unknown";
+	location = sizeof(plates);//Not tested as I stuck in this to determine accurate location
 
 	return *location;
 };
-void opt_con()
+void opt_con() //Operator Console
 {
 	bool result;
 	int in;
@@ -242,15 +242,15 @@ void opt_con()
 
 };
 
-void customer()
+void customer() //Customer Console
 {
 	bool result;
 
 	
 	int park, in[5];
 	float hrs;
-	cout << "Enter five digit unique car plate no.";
-	for (int i = 0; i < 5; ++i)
+	cout << "Enter five digit unique car plate no.(i.e Enter first then press Enter)";
+	for (int i = 0; i < 5; ++i) //Input of plate no so user cannot enter more than 5 digits
 	{
 		std::cin >> in[i];
 		result = true;
