@@ -32,7 +32,7 @@ struct First {
 		char password2[10];
 	}login;
 	
-};
+};//I added it initially for login,signup but later on applied different methadlogy for this so this is in no use
 	void add_opt() {
 		ofstream g("registration_opt.txt"); //ofstream is the one for getting data from the file, 
 			//and the file does not even have to exist. If it's ofstream, it'll take care of it for you.
@@ -88,14 +88,7 @@ struct First {
 			getline(cin, inName);
 			cout << "Enter Password: ";
 			getline(cin, inPassword);
-			//or this, if you are working with C strings (second version of declaration)
-			//cin.get(inName, 31);
-			//cin.get();
-			//cin.get(inPassword, 31);
-			//cin.get();
-			//and the "cin.get()" after each input line is necessary, or else[...]
-			//no idea what's happening inside istream, but it's mandatory if you don't want your
-			//input to get stuck or worse
+			
 			if (inName == name && inPassword == password)
 			{
 				cout << "Login Successful\n" //the '\n' is a character, so that's why I can add it 
@@ -108,7 +101,7 @@ struct First {
 			cout << "incorrect name or password\n"; //if you haven't entered the valid account,
 			//then the while loop is not done yet. So that's why this output is without condition
 		}
-		return check;	//now do something about the account
+		return check;	//to check login success or not
 	};
 	
 	
